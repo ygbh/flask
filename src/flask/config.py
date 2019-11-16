@@ -208,7 +208,7 @@ class Config(dict):
             e.strerror = "Unable to load configuration file (%s)" % e.strerror
             raise
 
-        return self.from_mapping(obj)
+        return self.from_mapping(**obj)
 
     def from_json(self, filename, silent=False):
         """Update the values in the config from a JSON file. The loaded
